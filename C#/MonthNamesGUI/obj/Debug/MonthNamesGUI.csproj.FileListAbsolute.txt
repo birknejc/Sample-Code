@@ -1,0 +1,11 @@
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\bin\Debug\MonthNamesGUI.exe.config
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\bin\Debug\MonthNamesGUI.exe
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\bin\Debug\MonthNamesGUI.pdb
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.csproj.AssemblyReference.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.MonthConversion.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.Properties.Resources.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.csproj.GenerateResource.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.csproj.CoreCompileInputs.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.exe
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\MonthNamesGUI\obj\Debug\MonthNamesGUI.pdb

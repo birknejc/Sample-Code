@@ -1,0 +1,14 @@
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\bin\Debug\UIExample2.exe.config
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\bin\Debug\UIExample2.exe
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\bin\Debug\UIExample2.pdb
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\GUIExample2.csproj.AssemblyReference.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\GUIExample2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.AddForm.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.ChangeForm.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.DeleteForm.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.MainMenu.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.Properties.Resources.resources
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\GUIExample2.csproj.GenerateResource.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\GUIExample2.csproj.CoreCompileInputs.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.exe
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\UIExample2\obj\Debug\UIExample2.pdb

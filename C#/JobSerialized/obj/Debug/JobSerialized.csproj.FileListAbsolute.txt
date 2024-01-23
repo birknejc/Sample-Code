@@ -1,0 +1,8 @@
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\obj\Debug\JobSerialized.csproj.AssemblyReference.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\obj\Debug\JobSerialized.csproj.SuggestedBindingRedirects.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\obj\Debug\JobSerialized.csproj.CoreCompileInputs.cache
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\bin\Debug\JobSerialized.exe.config
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\bin\Debug\JobSerialized.exe
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\bin\Debug\JobSerialized.pdb
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\obj\Debug\JobSerialized.exe
+C:\Users\Angela\Documents\IHCC\Spring 2023\C#\Projects\JobSerialized\obj\Debug\JobSerialized.pdb

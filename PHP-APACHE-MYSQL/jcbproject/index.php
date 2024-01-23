@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comic Book Store</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2058b0;
+      padding: 20px;
+      color: #fff;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #555;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Webhead Comics!</h1>
+  </header>
+
+  <nav>
+    <!-- Navigation links -->
+    <a href="index.php">Home</a>
+    <a href="products.php">Products</a>
+    <a href="about.php">About Us</a>
+    <a href="contact.php">Contact</a>
+  </nav>
+
+  <section>
+    <h2>About Our Business</h2>
+    <p>Welcome to Webhead Comics! We offer a wide range of comic books from various publishers, including Marvel, DC, and Image Comics. Whether you're a fan of superheroes, fantasy, or graphic novels, we have something for everyone.</p>
+    <img src="images/spuds.jpg" alt="Comic Book Store" />
+  </section>
+
+  <footer>
+    <p>&copy; <?php echo date('Y'); ?> Webhead Comics. All rights reserved.</p>
+  </footer>
+</body>
+</html>

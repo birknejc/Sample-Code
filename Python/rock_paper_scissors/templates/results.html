@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results Page</title>
+
+    <style>
+        #choice-player {
+            width: 250px;
+            height: 250px;
+        }
+
+        #choice-comp {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Results</h1>
+
+    <div>
+        <img id="choice-player" src="{{ url_for('static', filename=image) }}">
+    </div>
+
+    <div>
+        <img id="choice-comp" src="{{ url_for('static', filename=comp) }}">
+    </div>
+
+    <p>{{ round_result }}</p>
+    <p>{{ game_winner }}</p>
+
+    <!--<h2>Game Statistics</h2>
+    <p>Total rounds that the computer has won: {{ game.total_wins["computer"] }}</p>
+    <p>Total rounds that the player has won: {{ game.total_wins["player"] }}</p>
+    <p>Total full games played in this session: {{ game.games_played }}</p>-->
+
+    <a href="/">Back to Choice</a>
+    <br>
+    <a href="/game_stats">Game Stats</a>
+
+
+</body>
+</html>

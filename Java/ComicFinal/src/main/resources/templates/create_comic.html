@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Create Comic</title>
+</head>
+<body>
+<h1>Create Comic</h1>
+<!-- Form for creating a new comic, action points to "/comics" for POST request -->
+<form th:object="${comic}" th:action="@{/comics}" method="post">
+  <!-- Input fields and error messages for Publisher -->
+  <div>
+    <label>Publisher: <input type="text" th:field="*{publisher}" /></label>
+    <div th:if="${#fields.hasErrors('publisher')}" class="error-message" th:errors="*{publisher}"></div>
+  </div>
+  <!-- Input fields and error messages for Series -->
+  <div>
+    <label>Series: <input type="text" th:field="*{series}" /></label>
+    <div th:if="${#fields.hasErrors('series')}" class="error-message" th:errors="*{series}"></div>
+  </div>
+  <!-- Input fields and error messages for Volume -->
+  <div>
+    <label>Volume: <input type="number" th:field="*{volume}" /></label>
+    <div th:if="${#fields.hasErrors('volume')}" class="error-message" th:errors="*{volume}"></div>
+  </div>
+  <!-- Input fields and error messages for Issue -->
+  <div>
+    <label>Issue: <input type="number" th:field="*{issue}" /></label>
+    <div th:if="${#fields.hasErrors('issue')}" class="error-message" th:errors="*{issue}"></div>
+  </div>
+  <!-- Input fields and error messages for Price -->
+  <div>
+    <label>Price: <input type="number" step="0.01" th:field="*{price}" /></label>
+    <div th:if="${#fields.hasErrors('price')}" class="error-message" th:errors="*{price}"></div>
+  </div>
+  <!-- Input fields and error messages for Grade -->
+  <div>
+    <label>Grade: <input type="number" step="0.1" th:field="*{grade}" /></label>
+    <div th:if="${#fields.hasErrors('grade')}" class="error-message" th:errors="*{grade}"></div>
+  </div>
+  <!-- Input fields and error messages for Rarity -->
+  <div>
+    <label>Rarity: <input type="number" step="0.1" th:field="*{rarity}" /></label>
+    <div th:if="${#fields.hasErrors('rarity')}" class="error-message" th:errors="*{rarity}"></div>
+  </div>
+  <!-- Checkbox for First Appearance -->
+  <div>
+    <label>First Appearance: <input type="checkbox" th:field="*{firstAppearance}" /></label>
+  </div>
+  <!-- Submit button to save the comic -->
+  <button type="submit">Save</button>
+</form>
+<!-- Link to cancel and go back to the comics list -->
+<a th:href="@{/comics}">Cancel</a>
+</body>
+</html>

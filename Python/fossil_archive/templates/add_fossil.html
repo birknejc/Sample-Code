@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fossil Queries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        .query-form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .query-form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .query-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .query-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .query-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fossil Queries</h1>
+
+    <div class="query-form">
+        <form id="fossilQueryForm" method="POST" action="/add_fossil">
+            <label for="fossil-id">Fossil ID:</label>
+            <input type="text" id="fossil-id" name="fossil_id" required="">
+
+            <label for="fossil-name">Fossil Name:</label>
+            <input type="text" id="fossil-name" name="fossil_name" required="">
+
+            <label for="location-found">Location Found:</label>
+            <input type="text" id="location-found" name="location" required="">
+
+            <label for="fossil-description">Description:</label>
+            <input type="text" id="fossil-description" name="desc" required="">
+
+            <label for="found-date">Date Found (yyyy-mm-dd):</label>
+            <input type="text" id="found-date" name="date" required="">
+
+            <button type="submit">Submit Queries</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <h1>Display All Fossils</h1>
+        <table>
+            <tr>
+                <td>Fossil Id</td>
+                <td>Fossil Name</td>
+                <td>Location Discovered</td>
+                <td>Description</td>
+                <td>Date Acquired</td>
+            </tr>
+            <!-- jinja -->
+            {% for item in fossildata %}
+                <tr>
+                {% for i in item %}
+                    <td>{{ i }}</td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+
+</body></html>

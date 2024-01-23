@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Choice</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #options {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #options a {
+            text-decoration: none;
+        }
+
+        #options img {
+            width: 300px;  /* Adjust the width as needed */
+            height: 300px; /* Adjust the height as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Rock, Paper, or Scissors</h1>
+
+    <div id="options">
+        <a href="/result?id=paper">
+            <img src="../static/paper.jpg" alt="Paper">
+        </a>
+        <a href="/result?id=rock">
+            <img src="../static/rock.jpg" alt="Rock">
+        </a>
+        <a href="/result?id=scissors">
+            <img src="../static/scissors.jpg" alt="Scissors">
+        </a>
+    </div>
+</body>
+</html>

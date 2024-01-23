@@ -1,0 +1,56 @@
+{
+	"Comics":{
+		"Records":[
+			{
+				"Publisher": "MARVEL",
+				"Series": "WEB OF SPIDER-MAN",
+				"Volume": 1,
+				"Issue": 1,
+				"Price": 0.75,
+				"Grade": 2.8,
+				"Rarity": 3,
+				"FirstAppearance": "TRUE"
+			},
+			{
+				"Publisher": "MARVEL",
+				"Series": "THE AMAZING SPIDER-MAN",
+				"Volume": 1,
+				"Issue": 122,
+				"Price": 0.20,
+				"Grade": 2.7,
+				"Rarity": 3,
+				"FirstAppearance": "TRUE"
+			},
+			{
+				"Publisher": "MARVEL",
+				"Series": "MARVEL TEAM-UP",
+				"Volume": 1,
+				"Issue": 198,
+				"Price": 0.40,
+				"Grade": 5.2,
+				"Rarity": 3,
+				"FirstAppearance": "FALSE"
+			},
+			{
+				"Publisher": "DC",
+				"Series": "BATMAN",
+				"Volume": 1,
+				"Issue": 212,
+				"Price": 0.50,
+				"Grade": 8.5,
+				"Rarity": 3,
+				"FirstAppearance": "FALSE"
+			},
+			{
+				"Publisher": "IMAGE",
+				"Series": "SPAWN",
+				"Volume": 1,
+				"Issue": 300,
+				"Price": 1.50,
+				"Grade": 9.7,
+				"Rarity": 3,
+				"FirstAppearance": "TRUE"
+			}
+		]
+	}
+}

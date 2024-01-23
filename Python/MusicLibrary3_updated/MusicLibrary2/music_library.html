@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Music Library</title>
+    <link rel="icon" type="image/png" href="https://www.musikschule-debener.de/wp-content/uploads/2017/03/favicon_note_512-350x350.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://lh3.googleusercontent.com/blogger_img_proxy/AAOd8MzczQEW7PVEsV8aWQEs2q1nSWfks-PhB2Dge7ajjmxrZsuJhlyN5mKfmEPiwPK6f1XOWl15WvnshQqgySDooyFgSmwmWeQWRd9Wfss-T3mOxS6uNh3fFHXM5Xo7y3ym3lg9ktL79BC1NQ=s0-d') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1, h2 {
+            color: #007BFF; /* Vibrant blue color */
+        }
+
+        #container-wrapper {
+            display: flex;
+            justify-content: flex-start; /* Align the container to the left */
+            align-items: center;
+            height: 100vh; /* Make the container take the full viewport height */
+            padding-left: 20px; /* Add left padding to the container */
+        }
+
+        #playlist-container {
+            width: 30%; /* Set the width to 30% of the parent container */
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+            padding: 20px; /* Add some padding to the container */
+        }
+    </style>
+</head>
+<body>
+    <h1>My Playlists</h1>
+    <div id="playlist-container">
+        <!-- Existing playlists will be displayed here -->
+        <ul id="displayPlaylist">
+            <li>Playlist 1</li>
+            <li>Playlist 2</li>
+            <li>Playlist 3</li>
+            <li>Playlist 4</li>
+        </ul>
+    </div>
+
+    <h2>Search for a Song</h2>
+    <select name="song-names" id="select-song">
+        <option>a song name</option>
+        <option>a song name</option>
+        <option>a song name</option>
+        <option>a song name</option>
+    </select>
+    <button onclick="searchSong()">Search</button>
+
+    <h2>Create a Playlist</h2>
+    <input type="text" id="playlist-name" placeholder="Enter playlist name">
+    <button onclick="createPlaylist()">Create Playlist</button>
+
+    <h2>Search a Playlist</h2>
+    <input type="text" id="playlist-search" placeholder="Select Playlist">
+    <select id="select-playlistA">
+        <!-- Dropdown with existing playlists -->
+    </select>
+    <button onclick="searchPlaylist()">Search</button>
+
+    <h2>Add Song to Playlist</h2>
+    <input type="text" id="song-title" placeholder="Enter song title">
+    <input type="text" id="artist" placeholder="Enter artist">
+    <input type="text" id="length" placeholder="Enter length of song">
+    <input type="text" id="album" placeholder="Enter album name">
+    <select id="select-playlistB">
+        <!-- Dropdown with existing playlists -->
+    </select>
+    <button onclick="addSongToPlaylist()">Add Song</button>
+
+    <h2>Delete Song from Playlist</h2>
+    <input type="text" id="delete-song" placeholder="Enter song title">
+    <select id="select-playlistC">
+        <!-- Dropdown with existing playlists -->
+    </select>
+    <button onclick="deleteSongFromPlaylist()">Delete Song</button>
+
+    <script>
+        // JavaScript functions for handling interactions
+        function createPlaylist() {
+            var playlistNameInput = document.getElementById('playlist-name');
+            var playlistContainer = document.getElementById('displayPlaylist');
+            var newPlaylistItem = document.createElement('li');
+            newPlaylistItem.textContent = playlistNameInput.value;
+            playlistContainer.appendChild(newPlaylistItem);
+        }
+
+        function searchPlaylist() {
+            var searchInput = document.getElementById('playlist-search');
+            var selectedPlaylist = searchInput.value;
+            var playlists = document.getElementById('playlist-container').getElementsByTagName('li');
+
+            // Hide all playlists
+            for (var i = 0; i < playlists.length; i++) {
+                playlists[i].style.display = 'none';
+            }
+
+            // Show the selected playlist
+            for (var i = 0; i < playlists.length; i++) {
+                if (playlists[i].textContent.includes(selectedPlaylist)) {
+                    playlists[i].style.display = 'block';
+                }
+            }
+        }
+
+        function addSongToPlaylist() {
+            var songTitleInput = document.getElementById('song-title');
+            var artistInput = document.getElementById('artist');
+            var lengthInput = document.getElementById('length');
+            var albumInput = document.getElementById('album');
+            var playlistDropdown = document.getElementById('select-playlistB');
+            var selectedPlaylist = playlistDropdown.value;
+
+            // Create a new list item for the song
+            var newSongItem = document.createElement('li');
+            newSongItem.textContent = songTitleInput.value + ' - ' + artistInput.value;
+
+            // Append the new song item to the selected playlist
+            var selectedPlaylistContainer = document.getElementById('playlist-container');
+            selectedPlaylistContainer.appendChild(newSongItem);
+        }
+
+        function deleteSongFromPlaylist() {
+            var deleteSongInput = document.getElementById('delete-song');
+            var playlistDropdown = document.getElementById('select-playlistC');
+            var selectedPlaylist = playlistDropdown.value;
+
+            // Find the song to delete
+            var playlists = document.getElementById('playlist-container').getElementsByTagName('li');
+            for (var i = 0; i < playlists.length; i++) {
+                if (playlists[i].textContent.includes(selectedPlaylist) &&
+                    playlists[i].textContent.includes(deleteSongInput.value)) {
+                    // Remove the song item
+                    playlists[i].remove();
+                    break;
+                }
+            }
+        }
+
+        function searchSong() {
+            var searchInput = document.getElementById('select-song');
+            var selectedSong = searchInput.value;
+            var playlists = document.getElementById('playlist-container').getElementsByTagName('li');
+
+            // Hide all playlists
+            for (var i = 0; i < playlists.length; i++) {
+                playlists[i].style.display = 'none';
+            }
+
+            // Show the playlists containing the selected song
+            for (var i = 0; i < playlists.length; i++) {
+                if (playlists[i].textContent.includes(selectedSong)) {
+                    playlists[i].style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comic Database</title>
+</head>
+<body>
+<h1>Welcome to the Comic Database</h1>
+
+<!-- Section for displaying all comics -->
+<h2>All Comics</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Comic ID</th>
+    <th>Publisher</th>
+    <th>Series</th>
+    <th>Volume</th>
+    <th>Issue</th>
+    <th>Price</th>
+    <th>Grade</th>
+    <th>Rarity</th>
+    <th>First Appearance</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Loop through the comics and display each one -->
+  <tr th:each="comic : ${comics}">
+    <!-- Display individual comic attributes -->
+    <td th:text="${comic.comicId}"></td>
+    <td th:text="${comic.publisher}"></td>
+    <td th:text="${comic.series}"></td>
+    <td th:text="${comic.volume}"></td>
+    <td th:text="${comic.issue}"></td>
+    <td th:text="${comic.price}"></td>
+    <td th:text="${comic.grade}"></td>
+    <td th:text="${comic.rarity}"></td>
+    <td th:text="${comic.firstAppearance}"></td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Navigation links for different actions -->
+<h2>Navigation</h2>
+<ul>
+  <li><a href="/comics/new">Add New Comic</a></li>
+  <li><a href="/comics/edit">Edit Comics</a></li>
+  <li><a href="/comics/view">View Comic</a></li>
+</ul>
+</body>
+</html>

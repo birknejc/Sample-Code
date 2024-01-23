@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>View Comic</title>
+</head>
+<body>
+<h1>View Comic</h1>
+
+<!-- Form for selecting a comic to view -->
+<form th:action="@{/comics/view}" method="post">
+  <label>Select Comic:</label>
+  <select name="comicId">
+    <!-- Loop through comics and create options for selection -->
+    <option th:each="comic : ${comics}" th:value="${comic.comicId}" th:text="${comic.series + ' - ' + comic.issue}" />
+  </select>
+  <button type="submit">View Comic</button>
+</form>
+
+<!-- Display selected comic details in a table -->
+<table th:if="${comic}" border="1">
+  <!-- Publisher -->
+  <tr>
+    <th>Publisher</th>
+    <td th:text="${comic.publisher}"></td>
+  </tr>
+  <!-- Series -->
+  <tr>
+    <th>Series</th>
+    <td th:text="${comic.series}"></td>
+  </tr>
+  <!-- Volume -->
+  <tr>
+    <th>Volume</th>
+    <td th:text="${comic.volume}"></td>
+  </tr>
+  <!-- Issue -->
+  <tr>
+    <th>Issue</th>
+    <td th:text="${comic.issue}"></td>
+  </tr>
+  <!-- Price -->
+  <tr>
+    <th>Price</th>
+    <td th:text="${comic.price}"></td>
+  </tr>
+  <!-- Grade -->
+  <tr>
+    <th>Grade</th>
+    <td th:text="${comic.grade}"></td>
+  </tr>
+  <!-- Rarity -->
+  <tr>
+    <th>Rarity</th>
+    <td th:text="${comic.rarity}"></td>
+  </tr>
+  <!-- First Appearance -->
+  <tr>
+    <th>First Appearance</th>
+    <td th:text="${comic.firstAppearance ? 'Yes' : 'No'}"></td>
+  </tr>
+  <!-- Add more fields here -->
+</table>
+
+<!-- Link to navigate back to the comic list -->
+<a th:href="@{/comics}">Back to List</a>
+</body>
+</html>

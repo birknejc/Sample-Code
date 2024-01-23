@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Edit Comic</title>
+</head>
+<body>
+<h1>Edit Comic</h1>
+<!-- Form for editing a selected comic, action points to "/comics/edit" for POST request -->
+<form th:object="${selectedComic}" th:action="@{/comics/edit}" method="post">
+  <!-- Select dropdown to choose a comic for editing -->
+  <label>Select Comic:</label>
+  <select th:field="*{comicId}">
+    <option th:each="comic : ${comics}" th:value="${comic.comicId}" th:text="${comic.series + ' - ' + comic.issue}" />
+  </select><br>
+
+  <!-- Input fields and error messages for editing comic properties -->
+  <label>Publisher: <input type="text" th:field="*{publisher}" /></label><br>
+  <p th:if="${#fields.hasErrors('publisher')}" class="error" th:errors="*{publisher}">Publisher Error</p>
+
+  <label>Series: <input type="text" th:field="*{series}" /></label><br>
+  <p th:if="${#fields.hasErrors('series')}" class="error" th:errors="*{series}">Series Error</p>
+
+  <label>Volume: <input type="number" th:field="*{volume}" /></label><br>
+  <p th:if="${#fields.hasErrors('volume')}" class="error" th:errors="*{volume}">Volume Error</p>
+
+  <label>Issue: <input type="number" th:field="*{issue}" /></label><br>
+  <p th:if="${#fields.hasErrors('issue')}" class="error" th:errors="*{issue}">Issue Error</p>
+
+  <label>Price: <input type="number" step="0.01" th:field="*{price}" /></label><br>
+  <p th:if="${#fields.hasErrors('price')}" class="error" th:errors="*{price}">Price Error</p>
+
+  <label>Grade: <input type="number" step="0.1" th:field="*{grade}" /></label><br>
+  <p th:if="${#fields.hasErrors('grade')}" class="error" th:errors="*{grade}">Grade Error</p>
+
+  <label>Rarity: <input type="number" step="0.1" th:field="*{rarity}" /></label><br>
+  <p th:if="${#fields.hasErrors('rarity')}" class="error" th:errors="*{rarity}">Rarity Error</p>
+
+  <label>First Appearance: <input type="checkbox" th:field="*{firstAppearance}" /></label><br>
+  <p th:if="${#fields.hasErrors('firstAppearance')}" class="error" th:errors="*{firstAppearance}">First Appearance Error</p>
+
+  <!-- Save and Delete buttons for form submission -->
+  <button type="submit">Save</button>
+  <button type="button" onclick="deleteComic()">Delete</button>
+</form>
+
+<!-- Link to cancel and go back to the comics list -->
+<a th:href="@{/comics}">Cancel</a>
+
+<!-- JavaScript code for confirming comic deletion -->
+<script th:inline="javascript">
+  function deleteComic() {
+    if (confirm('Are you sure you want to delete this comic?')) {
+      // Set form action and method attributes for deletion
+      document.querySelector('form').setAttribute('action', '/comics/delete');
+      document.querySelector('form').setAttribute('method', 'post');
+      // Submit the form for deletion
+      document.querySelector('form').submit();
+    }
+  }
+</script>
+
+</body>
+</html>

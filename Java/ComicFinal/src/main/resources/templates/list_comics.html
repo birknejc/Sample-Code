@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Comic List</title>
+</head>
+<body>
+<h1>Comic List</h1>
+
+<!-- Table for displaying the list of comics -->
+<table>
+    <tr>
+        <!-- Column headings -->
+        <th>Publisher</th>
+        <th>Series</th>
+        <th>Volume</th>
+        <th>Issue</th>
+        <!-- Add more columns as needed -->
+        <th></th> <!-- Placeholder for actions column -->
+    </tr>
+    <!-- Loop through each comic and display its information -->
+    <tr th:each="comic : ${comics}">
+        <td th:text="${comic.publisher}"></td> <!-- Display the publisher of the comic -->
+        <td th:text="${comic.series}"></td> <!-- Display the series of the comic -->
+        <td th:text="${comic.volume}"></td> <!-- Display the volume of the comic -->
+        <td th:text="${comic.issue}"></td> <!-- Display the issue of the comic -->
+        <!-- Add more columns as needed -->
+        <td>
+            <!-- Action links for viewing, editing, and deleting the comic -->
+            <a th:href="@{/comics/{id}(id=${comic.id})}">View</a> | <!-- View link -->
+            <a th:href="@{/comics/{id}/edit(id=${comic.id})}">Edit</a> | <!-- Edit link -->
+            <a th:href="@{/comics/{id}/delete(id=${comic.id})}">Delete</a> <!-- Delete link -->
+        </td>
+    </tr>
+</table>
+
+<!-- Link for adding a new comic -->
+<a th:href="@{/comics/new}">Add New Comic</a>
+</body>
+</html>

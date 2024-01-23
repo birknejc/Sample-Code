@@ -1,0 +1,47 @@
+<!-- comicSales.html -->
+<html>
+<head>
+    <!-- comicSales.html - Comic Book Sales Form (Ajax) -->
+    <title> Comic Book Collection Form (Ajax) </title>
+	<link rel="icon" href="images/spider-man.png" type="image/x-icon">
+    <script type="text/javascript" src="comicSales.js"></script>
+    <style>
+        #seriesImage {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2> Welcome to My Comic Book Collection </h2>
+	<h3> Enter a new comic book to add to the collection </h3>
+    <form name="comicForm" method="post" onsubmit="submitForm(); return false;" onreset="resetForm()">
+        <fieldset>
+            <legend> Comic Book Information</legend>
+            <label>Series</label>
+            <select name="series" id="series" onchange="getPublisher(this.value)">
+				<option value="" selected disabled>Choose Title</option>
+                <option value="Spider-Man">Spider-Man</option>
+                <option value="Batman">Batman</option>
+                <option value="Superman">Superman</option>
+                <option value="X-Men">X-Men</option>
+                <!-- Add more series options as needed -->
+            </select><br />
+            <label>Issue Number</label>
+            <input type="text" name="issueNumber" id="issueNumber" size="10" /><br />
+            <label>Purchase Price</label>
+            <input type="text" name="purchasePrice" id="purchasePrice" size="10" /><br />
+            <label>Grade</label>
+            <input type="text" name="grade" id="grade" size="10" /><br />
+            <label>Publisher</label>
+            <input type="text" name="publisher" id="publisher" size="30" /><br />
+            <label></label>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Clear Form" />
+        </fieldset>
+    </form>
+	<div id="collectionContainer"></div>
+	<button id="viewCollectionButton" onclick="viewCollection()">View Collection</button>
+
+    <img id="seriesImage" src="" alt="Series Image" style="max-width: 100%; max-height: 300px;"/>
+</body>
+</html>
