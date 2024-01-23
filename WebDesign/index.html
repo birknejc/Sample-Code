@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Jeff Birkner -->
+<html lang="en">
+	<head>
+		<title>Welcome to Lakes Aquarium</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="link.css">
+	</head>
+	<style>
+		.container{
+			width: 900px;
+		}
+		.content{
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 12px;
+			background-color: #FFF;
+			padding: 10px;
+			}
+			header{
+				background-color: #036;
+				height: 220px;
+				color: #FFF;
+			}
+			#special{
+				background-color: #09F;
+			}
+			#colOne{
+				width: 200px;
+				float:left;
+			}
+			#colTwo{
+				width: 680px;
+				display:flex;
+    			flex-direction: column;
+			}
+			h1{
+				font-size: 18px;
+				color: #09F;
+			}
+			h2{
+				font-size: 16px;
+				color: #036;
+			}
+			h3{
+				font-size: 14px;
+				color: #333;
+			}
+			body{
+				background-image: url("images/site-bg.jpg");
+				background-repeat: repeat-x;
+				background-color: #5EB3F6;
+			}
+            table{
+                border-collapse: collapse;
+                border-spacing: 0;
+				border-color: #999;
+				border-width: 1px;
+                font-size: small;
+				padding:5px;
+            }
+			td, th{
+                border-style: solid;
+				border-color: #999;
+				border-width: 1px;
+            }
+			th{
+				background-color: #999;
+				text-align: left;
+			}
+			td{
+				text-align: right;
+				padding:5px;
+			}
+	</style>
+	<body>
+	<div class="container">
+			<header>
+				<span id="special"></span>
+				<img src="images/lakes-aquarium-header.jpg" alt="Fish">
+			</header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="#">Families</a></li>
+					<li><a href="#">Plan Your Visit</a></li>
+					<li><a href="photo.html">Photos</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		<div class="content">
+			<aside id="colOne">
+				<h2>Aquarium Hours</h2>
+				<table>
+					<thead>
+						<th>Day</th>
+						<th>Hour</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Mon</td>
+							<td>10:00am - 8:00pm</td>
+						</tr>
+						<tr>
+							<td>Tue</td>
+							<td>10:00am - 8:00pm</td>
+						</tr>
+						<tr>
+							<td>Wed</td>
+							<td>10:00am - 8:00pm</td>
+						</tr>
+						<tr>
+							<td>Thu</td>
+							<td>10:00am - 8:00pm</td>
+						</tr>
+						<tr>
+							<td>Fri</td>
+							<td>10:00am - 8:00pm</td>
+						</tr>
+						<tr>
+							<td>Sat</td>
+							<td>9:00am - 8:00pm</td>
+						</tr>
+						<tr>
+							<td>Sun</td>
+							<td>12:00pm - 5:00pm</td>
+						</tr>
+					</tbody>
+				</table>
+			</aside>
+			<section id="colTwo">
+				<h1>Welcome to Lakes Aquarium.</h1>
+					<p title="Welcome">
+					We hope you learn a lot about Iowa and our natural world. We have many native species who
+					call Lakes Aquarium home as well as exciting exhibits. Additional exhibits showcase animals
+					from both freshwater and marine habitats around the world.
+					</p>
+				<h2>Families</h2>
+					<p title="Plan your trip">
+					Plan a Trip and take your group to experience the world’s greatest lakes...Lakes Aquarium offers a
+					unique experience for all ages.
+					</p>
+					<ol style="list-style-type: circle;">
+						<li>Fun for the entire family!</li>
+						<li>Affordable ticket prices</li>
+						<li>Open all year round!</li>
+					</ol>
+				<h3>Around the Aquarium</h3>
+					<p title="Contact us">
+					If you are visiting from out of town, there are hotel package deals in all price ranges, nearby dining
+					options for lunch or for dinner as well as recommendations for area attractions and shopping.
+					</p>
+					<p>
+					Lakes Aquarium 1234<br>
+					Lakeview Dr.<br>
+					Des Moines, IA 50301 <br>	
+					<a href="http://lakesaquarium.org"
+					target="_blank"
+					title="Visit us online"
+					>
+					Visit us online!
+					</a>
+					</p>
+		</section>
+		</div><!--end container-->
+	<footer>
+		<div class="footer-container">
+			<div id="footerNav"></div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="#">Families</a></li>
+					<li><a href="#">Plan Your Visit</a></li>
+					<li><a href="photo.html">Photos</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div><!--end container-->
+			<div id="footerCopyright">
+				<span id="special">Copyright Lakes Aquarium</span>
+			</div><!--end container-->
+		</div><!--end container-->
+	</footer>
+	</div><!--end container-->
+	</body>
+</html>

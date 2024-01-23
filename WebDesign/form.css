@@ -1,0 +1,35 @@
+form{
+    padding: 10px;
+    margin:20px;
+    max-width: 600px;
+    background-color: #EEE;
+}
+textarea{
+    resize:none;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.input{
+    padding-right: 10px;
+}
+.align label{
+    display:inline-block;
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+input[type=submit]{
+    background-color: #09F;
+    padding: 5px;
+    margin: 10px;
+    border:none;
+    border-radius: 10%;
+}
+input[type=radio]{
+    margin-top 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
